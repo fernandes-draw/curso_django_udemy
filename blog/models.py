@@ -22,7 +22,7 @@ class Post(models.Model):
     status = models.CharField(max_length=10, choices=STATUS, default='rascunho')
 
     class Meta:
-        ordering = ('publicado',)
+        ordering = ('-publicado',)
 
     def __str__(self):
         return self.titulo
