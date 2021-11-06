@@ -34,7 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.statics',
+    'django.contrib.staticfiles',
     'blog',
 ]
 
@@ -116,7 +116,7 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = 'media'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'statics')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_DIRS = [
     'statics'
