@@ -3,6 +3,12 @@ from django.db import models
 from django.utils import timezone
 
 
+class PublishedManager(models.Manager):
+    def get_queryset(self):
+        return super(PublishedManager, self).get_queryset() \
+            .filter(status='publicado')
+
+
 # Create your models here.
 
 
@@ -20,6 +26,9 @@ class Post(models.Model):
     criado = models.DateTimeField(auto_now_add=True)
     alterado = models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=10, choices=STATUS, default='rascunho')
+
+    objects = models.Manager()
+    published = PublishedManager()
 
     class Meta:
         ordering = ('-publicado',)
