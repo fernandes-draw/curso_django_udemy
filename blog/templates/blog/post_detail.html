@@ -7,4 +7,6 @@
     <p>{{ object.conteudo }}</p>
 </div>
 <a href="{{ object.get_absolute_url_update }}">+ Editar postagem</a>
+<br>
+<a href="{{ object.get_absolute_url_delete }}">- Excluir postagem</a>
 {% endblock content %}

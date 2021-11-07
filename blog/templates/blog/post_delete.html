@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block title %} Blog - Excluir Postagem {% endblock title %}
+{% block content %}
+<h1>Excluir Postagem</h1>
+<div class="post-entry">
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Você tem certeza que deseja excluir esse post "{{ post.titulo }}"?</p>
+        <input type="submit" value="Excluir">
+    </form>
+</div>
+
+{% endblock content %}
